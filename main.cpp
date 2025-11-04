@@ -90,6 +90,7 @@ int createLeafNodes(int freq[]) {
 // Step 3: Build the encoding tree using heap operations
 int buildEncodingTree(int nextFree) {
     // TODO:
+    // Base case to handle if there are no free leaf nodes
     if (nextFree == 0)
         return -1;
 
@@ -121,6 +122,7 @@ int buildEncodingTree(int nextFree) {
 // Step 4: Use an STL stack to generate codes
 void generateCodes(int root, string codes[]) {
     // TODO:
+    // Base cases for if there is no root and if the root has no children
     if (root == -1)
         return;
     if (leftArr[root] == -1 && rightArr[root] == -1) {
